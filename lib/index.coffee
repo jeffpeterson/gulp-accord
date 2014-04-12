@@ -12,7 +12,7 @@ module.exports = (lang, opts) ->
 
   # Load the package for the compiler. This uses module.parent to load it
   # from the user-installed node_modules correctly.
-  try adapter = accord.load(lang, path.join(module.parent.paths[0], lang))
+  try adapter = accord.load(lang)
   catch err
     throw new Error("#{PLUGIN_NAME}: #{lang} not installed. Try 'npm i #{lang} -S'")
 
